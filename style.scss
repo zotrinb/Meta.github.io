@@ -11,6 +11,7 @@ li,ol{
 
 body{
     background-color: #000;
+    padding-top: 18vh;
 }
 
 .container{
@@ -45,6 +46,8 @@ $secondaryfont:'Inter', sans-serif;
     padding: 17px 40px 27px;
 }
 
+
+
 /* header */
 
 .header__items, .nav__ul, .header__icons{
@@ -69,8 +72,15 @@ $secondaryfont:'Inter', sans-serif;
 }
 
 .header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(125,95,49,.9);
+    z-index: 1000;
+
     &__items{
-        padding-top: 40px;
+        padding: 20px 0;
         justify-content: space-between;
         
     }
@@ -91,6 +101,23 @@ $secondaryfont:'Inter', sans-serif;
     
         .burger__menu{
             display: flex;
+            z-index: 1000;
+        }
+
+        .active{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background-color: rgba(0,0,0,.7);
+            
+
         }
     }
 }
@@ -103,7 +130,6 @@ $secondaryfont:'Inter', sans-serif;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 7%;
     }
 
     &__item{
@@ -669,7 +695,7 @@ $secondaryfont:'Inter', sans-serif;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            font-size: 5.5vw;
+            font-size: 5vw;
 
             .faq__img{
                 display: none;
@@ -991,3 +1017,8 @@ $secondaryfont:'Inter', sans-serif;
         display: block;
     }
 }
+
+.locked{
+    overflow: hidden;
+}
+
